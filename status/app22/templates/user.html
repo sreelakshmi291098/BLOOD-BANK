@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>bloodbank</title>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          height: 800px;
+          margin-top: -268px;
+        }
+        
+        li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+        
+        li a.active {
+          background-color: #04AA6D;
+          color: white;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #555;
+          color: white;
+        }
+        body{
+            background-color:red;
+            background-image: url(../static/css/images/blood.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+        }
+        .animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.animate-charcter{
+    margin-top: 200px;
+}
+        
+        </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h5 class="animate-charcter"> GIVE THE GIFT OF LIFE DONATE BLLOD</h5>
+          </div>
+        </div>
+      </div>
+    
+    <ul>
+        <li><a class="active" href="">USER</a></li>
+        <li><a  href="{% url 'index' %}">HOME</a></li>
+        <li><a href="{% url 'userrequest' %}">MAKE REQUEST</a></li>
+        <li><a href="{% url 'viewuserreq' %}">REQUEST HISTORY</a></li>
+        <li><a href="{% url 'viewuserprofile' %}">VIEW PROFILE</a></li>
+        <li><a href="{% url 'donorlist' %}">DONOR LIST</a></li>
+        <li><a href="{% url 'donatorapproved' %}">DONOR APPROVED</a></li>
+        <li><a href="{% url 'feedback' %}">ADD FEEDBACK</a></li>
+      </ul>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
